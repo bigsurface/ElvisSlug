@@ -15,8 +15,6 @@ function preload() {
   myAnimation = loadAnimation(mySpritesheet);
   myMovingslug = loadSpriteSheet('abstract/ElvisSlugslime.png', 96, 96, 40);
   mySlug = loadAnimation(myMovingslug);
-  myMovingbanana = loadSpriteSheet('abstract/banana.png', 75, 75, 2);
-  myBanana = loadAnimation(myMovingbanana);
   myMovingbanana2 = loadSpriteSheet('abstract/bananaslow.png', 75, 75, 8);
   myBanana2 = loadAnimation(myMovingbanana2);
 }
