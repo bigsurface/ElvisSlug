@@ -12,19 +12,12 @@ let yoff = 0.0;
 
 
 function preload() {
-  mySpritesheet = loadSpriteSheet('abstract/ElvisSlug.png', 64, 64, 16);
-  myAnimation = loadAnimation(mySpritesheet);
   myMovingslug = loadSpriteSheet('abstract/ElvisSlugslime.png', 96, 96, 40);
   mySlug = loadAnimation(myMovingslug);
-  myMovingbanana = loadSpriteSheet('abstract/banana.png', 75, 75, 2);
-  myBanana = loadAnimation(myMovingbanana);
-  myMovingbanana2 = loadSpriteSheet('abstract/bananaslow.png', 75, 75, 8);
-  myBanana2 = loadAnimation(myMovingbanana2);
 }
 
 function setup() {
   createCanvas(1350, 550);
-  noStroke();
 }
 
 function draw() {
@@ -88,13 +81,11 @@ function draw() {
     pop();
 
     fill(255);
-    // We are going to draw a polygon out of the wave points
     beginShape();
   
     let xoff = 0; // Option #1: 2D Noise
     // let xoff = yoff; // Option #2: 1D Noise
   
-    // Iterate over horizontal pixels
     for (let x = 0; x <= width; x += 10) {
       // Calculate a y value according to noise, map to
   
@@ -104,7 +95,6 @@ function draw() {
       // Option #2: 1D Noise
       // let y = map(noise(xoff), 0, 1, 200,300);
   
-      // Set the vertex
       vertex(x, y);
       // Increment x dimension for noise
       xoff += 0.05;
@@ -120,7 +110,5 @@ function draw() {
 
   counter+=10
 
-//   animation(myAnimation, 100, 100);
   animation(mySlug, 625, 350);
-//   animation(myBanana2, 50, 50);
 }
